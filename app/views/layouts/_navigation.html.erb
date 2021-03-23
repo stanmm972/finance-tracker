@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <%= link_to 'Finance Tracker', root_path, class: 'navbar-brand' %>
+    <% if current_user %> 
     <button
       class="navbar-toggler"
       type="button"
@@ -15,10 +16,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Home <span class="sr-only">(current)</span></a
-          >
+        <li class="nav-item <%= 'active' if request.path == my_portfolio_path %> ">
+          <%= link_to "My portfolio", my_portfolio_path, class: "nav-link" %> 
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -52,6 +51,11 @@
           >
         </li>
       </ul>
+      <ul class= "navbar-nav ml-auto">
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, class: "btn btn-danger mr-2", method: :delete %> 
+        </li>
+      </ul>
       <form class="form-inline my-2 my-lg-0">
         <input
           class="form-control mr-sm-2"
@@ -64,5 +68,6 @@
         </button>
       </form>
     </div>
+    <% end %> 
   </div>
 </nav>
