@@ -1,5 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html, body {
+    height: 100%;
+}
+
 .search-area{
     padding-top: 50px;
 }
@@ -15,4 +19,37 @@
 .results-block{
     display: inline-block;
     margin-bottom: 1rem;
+}
+
+.user-name {
+    margin-top: 3.5%;
+    padding-right: 5px;
+}
+
+.intro{
+    background-image: asset-url("jumbo_img");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 425px;
+    margin-top: 5%;
+}
+
+.jumbotron{
+    color: whitesmoke;
+}
+.jumbotron h1{
+    font-weight: 500;
+}
+
+.welcome{
+    background-image: asset-url("businessman");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.main-bd{
+    height: 100%;
 }
